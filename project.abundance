@@ -65,8 +65,8 @@
         {
             "atomType": "Circle",
             "name": "Circle",
-            "x": 0.19973544973544974,
-            "y": 0.5013927576601671,
+            "x": 0.19136960600375233,
+            "y": 0.20055710306406688,
             "uniqueID": 1727806544750,
             "ioValues": [
                 {
@@ -79,8 +79,8 @@
         {
             "atomType": "Move",
             "name": "Move",
-            "x": 0.3505291005291006,
-            "y": 0.5264623955431754,
+            "x": 0.2786116322701689,
+            "y": 0.36490250696378834,
             "uniqueID": 1727806548860,
             "ioValues": [
                 {
@@ -105,13 +105,13 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.49061913696060033,
-            "y": 0.8050139275766017,
+            "x": 0.5215759849906191,
+            "y": 0.8133704735376045,
             "uniqueID": 1727806559374,
             "ioValues": [
                 {
                     "name": "Shape",
-                    "ioValue": 1727806548860
+                    "ioValue": 1727810292283
                 },
                 {
                     "name": "Number",
@@ -125,6 +125,24 @@
             "description": "Defines a Replicad code block.",
             "codeVersion": 1,
             "code": "//Inputs:[Shape, Number, Angle];\n\nlet rotatedShape = await Rotate(Shape, 0, 0, 90)\n\nconsole.log(\"In Code\")\nconsole.log(rotatedShape)\n\nreturn rotatedShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
+        },
+        {
+            "atomType": "Extrude",
+            "name": "Extrude",
+            "x": 0.3517823639774859,
+            "y": 0.4958217270194986,
+            "uniqueID": 1727810292283,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1727806548860
+                },
+                {
+                    "name": "height",
+                    "ioValue": 10
+                }
+            ],
+            "description": "Extrudes a 2D shape. Input can be negitive. "
         }
     ],
     "allConnectors": [
@@ -151,17 +169,24 @@
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "Shape",
-            "ap2Primary": false,
-            "ap1ID": 1727806548860,
-            "ap2ID": 1727806559374
-        },
-        {
-            "ap1Name": "geometry",
             "ap2Name": "number or geometry",
             "ap2Primary": false,
             "ap1ID": 1727806548860,
             "ap2ID": 1727806508178
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1727806548860,
+            "ap2ID": 1727810292283
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Shape",
+            "ap2Primary": false,
+            "ap1ID": 1727810292283,
+            "ap2ID": 1727806559374
         }
     ],
     "unitsKey": "Inches",
