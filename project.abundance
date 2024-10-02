@@ -27,12 +27,7 @@
             "x": 0.98,
             "y": 0.5,
             "uniqueID": 1727806508178,
-            "ioValues": [
-                {
-                    "name": "number or geometry",
-                    "ioValue": 1727806559374
-                }
-            ],
+            "ioValues": [],
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
@@ -111,7 +106,7 @@
             "ioValues": [
                 {
                     "name": "Shape",
-                    "ioValue": 10
+                    "ioValue": 1727810292283
                 },
                 {
                     "name": "Number",
@@ -119,7 +114,7 @@
                 },
                 {
                     "name": "Angle",
-                    "ioValue": 30
+                    "ioValue": 10
                 }
             ],
             "description": "Defines a Replicad code block.",
@@ -146,13 +141,6 @@
         }
     ],
     "allConnectors": [
-        {
-            "ap1Name": "number or geometry",
-            "ap2Name": "Shape",
-            "ap2Primary": false,
-            "ap1ID": 1727806514723,
-            "ap2ID": 1727806559374
-        },
         {
             "ap1Name": "number or geometry",
             "ap2Name": "Number",
@@ -187,6 +175,13 @@
             "ap2Primary": false,
             "ap1ID": 1727806559374,
             "ap2ID": 1727806508178
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Shape",
+            "ap2Primary": false,
+            "ap1ID": 1727810292283,
+            "ap2ID": 1727806559374
         }
     ],
     "unitsKey": "Inches",
